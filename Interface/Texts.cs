@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BrailleWindowsApplication_SA
+namespace BrailleWindowsApplication_SA.Interface
 {
-    public partial class Form1 : Form
+    public partial class Texts : Form
     {
-        public Form1()
+        public Texts()
         {
             InitializeComponent();
         }
