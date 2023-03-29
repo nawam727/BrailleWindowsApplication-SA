@@ -32,25 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Texts));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.TextsBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ShapesBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.TextBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.TextTB = new System.Windows.Forms.RichTextBox();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.BrailleTB = new System.Windows.Forms.RichTextBox();
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ConvertBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Printbtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.ClosePic = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -61,7 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel1.Controls.Add(this.TextBtn);
+            this.panel1.Controls.Add(this.TextsBtn);
             this.panel1.Controls.Add(this.ShapesBtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -72,26 +74,30 @@
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // pictureBox1
+            // TextsBtn
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(59, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Braille Printer";
+            this.TextsBtn.ActiveBorderThickness = 1;
+            this.TextsBtn.ActiveCornerRadius = 20;
+            this.TextsBtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
+            this.TextsBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.TextsBtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
+            this.TextsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.TextsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextsBtn.BackgroundImage")));
+            this.TextsBtn.ButtonText = "Texts";
+            this.TextsBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.TextsBtn.Font = new System.Drawing.Font("Poppins", 14.25F);
+            this.TextsBtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.TextsBtn.IdleBorderThickness = 1;
+            this.TextsBtn.IdleCornerRadius = 20;
+            this.TextsBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
+            this.TextsBtn.IdleForecolor = System.Drawing.Color.White;
+            this.TextsBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
+            this.TextsBtn.Location = new System.Drawing.Point(16, 385);
+            this.TextsBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.TextsBtn.Name = "TextsBtn";
+            this.TextsBtn.Size = new System.Drawing.Size(214, 66);
+            this.TextsBtn.TabIndex = 3;
+            this.TextsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ShapesBtn
             // 
@@ -118,30 +124,26 @@
             this.ShapesBtn.TabIndex = 2;
             this.ShapesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TextBtn
+            // label1
             // 
-            this.TextBtn.ActiveBorderThickness = 1;
-            this.TextBtn.ActiveCornerRadius = 20;
-            this.TextBtn.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.TextBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.TextBtn.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.TextBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.TextBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TextBtn.BackgroundImage")));
-            this.TextBtn.ButtonText = "Texts";
-            this.TextBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.TextBtn.Font = new System.Drawing.Font("Poppins", 14.25F);
-            this.TextBtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.TextBtn.IdleBorderThickness = 1;
-            this.TextBtn.IdleCornerRadius = 20;
-            this.TextBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.TextBtn.IdleForecolor = System.Drawing.Color.White;
-            this.TextBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.TextBtn.Location = new System.Drawing.Point(16, 385);
-            this.TextBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.TextBtn.Name = "TextBtn";
-            this.TextBtn.Size = new System.Drawing.Size(214, 66);
-            this.TextBtn.TabIndex = 3;
-            this.TextBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(59, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 42);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Braille Printer";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -150,7 +152,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(282, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 42);
+            this.label2.Size = new System.Drawing.Size(284, 42);
             this.label2.TabIndex = 4;
             this.label2.Text = "Input Text to Convert ";
             // 
@@ -163,11 +165,6 @@
             this.panel2.Size = new System.Drawing.Size(455, 449);
             this.panel2.TabIndex = 8;
             // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 20;
-            this.bunifuElipse2.TargetControl = this.TextTB;
-            // 
             // TextTB
             // 
             this.TextTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -178,6 +175,11 @@
             this.TextTB.Size = new System.Drawing.Size(450, 444);
             this.TextTB.TabIndex = 7;
             this.TextTB.Text = "";
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.TargetControl = this.TextTB;
             // 
             // bunifuElipse3
             // 
@@ -193,11 +195,6 @@
             this.panel3.Size = new System.Drawing.Size(455, 449);
             this.panel3.TabIndex = 10;
             // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 20;
-            this.bunifuElipse4.TargetControl = this.panel3;
-            // 
             // BrailleTB
             // 
             this.BrailleTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -208,6 +205,11 @@
             this.BrailleTB.Size = new System.Drawing.Size(450, 444);
             this.BrailleTB.TabIndex = 7;
             this.BrailleTB.Text = "";
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 20;
+            this.bunifuElipse4.TargetControl = this.panel3;
             // 
             // bunifuElipse5
             // 
@@ -264,12 +266,23 @@
             this.Printbtn.TabIndex = 12;
             this.Printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ClosePic
+            // 
+            this.ClosePic.Image = ((System.Drawing.Image)(resources.GetObject("ClosePic.Image")));
+            this.ClosePic.Location = new System.Drawing.Point(1239, 12);
+            this.ClosePic.Name = "ClosePic";
+            this.ClosePic.Size = new System.Drawing.Size(29, 38);
+            this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ClosePic.TabIndex = 13;
+            this.ClosePic.TabStop = false;
+            // 
             // Texts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.ClosePic);
             this.Controls.Add(this.Printbtn);
             this.Controls.Add(this.ConvertBtn);
             this.Controls.Add(this.panel3);
@@ -286,6 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +312,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuThinButton2 ShapesBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 TextBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 TextsBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
@@ -310,5 +324,6 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
         private Bunifu.Framework.UI.BunifuThinButton2 ConvertBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 Printbtn;
+        private System.Windows.Forms.PictureBox ClosePic;
     }
 }

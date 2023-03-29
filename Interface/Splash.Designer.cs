@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.MyProgress = new System.Windows.Forms.ProgressBar();
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PercentageLbl = new System.Windows.Forms.Label();
+            this.progresMyProgresssBar1 = new System.Windows.Forms.ProgressBar();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,19 +45,16 @@
             this.bunifuElipse1.ElipseRadius = 20;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // MyProgress
+            // label1
             // 
-            this.MyProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.MyProgress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.MyProgress.Location = new System.Drawing.Point(120, 317);
-            this.MyProgress.Name = "MyProgress";
-            this.MyProgress.Size = new System.Drawing.Size(377, 23);
-            this.MyProgress.TabIndex = 3;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 10;
-            this.bunifuElipse2.TargetControl = this.MyProgress;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(215, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 42);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bralille Printer";
             // 
             // pictureBox1
             // 
@@ -69,33 +66,28 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(215, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 42);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bralille Printer";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // PercentageLbl
             // 
             this.PercentageLbl.AutoSize = true;
-            this.PercentageLbl.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold);
+            this.PercentageLbl.Font = new System.Drawing.Font("Poppins SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PercentageLbl.ForeColor = System.Drawing.Color.White;
             this.PercentageLbl.Location = new System.Drawing.Point(293, 226);
             this.PercentageLbl.Name = "PercentageLbl";
-            this.PercentageLbl.Size = new System.Drawing.Size(38, 42);
+            this.PercentageLbl.Size = new System.Drawing.Size(36, 42);
             this.PercentageLbl.TabIndex = 2;
             this.PercentageLbl.Text = "%";
-            this.PercentageLbl.Click += new System.EventHandler(this.label2_Click);
             // 
-            // timer1
+            // progresMyProgresssBar1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.progresMyProgresssBar1.Location = new System.Drawing.Point(120, 317);
+            this.progresMyProgresssBar1.Name = "progresMyProgresssBar1";
+            this.progresMyProgresssBar1.Size = new System.Drawing.Size(377, 23);
+            this.progresMyProgresssBar1.TabIndex = 3;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 10;
+            this.bunifuElipse2.TargetControl = this.progresMyProgresssBar1;
             // 
             // Splash
             // 
@@ -103,15 +95,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(630, 401);
+            this.Controls.Add(this.progresMyProgresssBar1);
             this.Controls.Add(this.PercentageLbl);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.MyProgress);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Splash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Splash";
-            this.Load += new System.EventHandler(this.Splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,11 +112,11 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.ProgressBar MyProgress;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label PercentageLbl;
+        private System.Windows.Forms.ProgressBar progresMyProgresssBar1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private System.Windows.Forms.Timer timer1;
     }
 }
