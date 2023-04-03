@@ -17,9 +17,19 @@ namespace BrailleWindowsApplication_SA.Interface
             InitializeComponent();
         }
 
+        //Convert btn and error
         private void convertShapes_Click(object sender, EventArgs e)
         {
-
+            errlabel.ForeColor = Color.Red;
+            if (ShapesCB.SelectedItem == null)
+            {
+                errlabel.Show();
+                errlabel.Text = "Select an Item";
+                return;
+            }
+            errlabel.Hide();
+            errlabel.Text = "";
+            ShapesCB_SelectedIndexChanged(sender, e);
         }
 
         private void ClosePic_Click(object sender, EventArgs e)
@@ -69,5 +79,6 @@ namespace BrailleWindowsApplication_SA.Interface
                     break;
             }
         }
+
     }
 }
