@@ -5,11 +5,6 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrailleWindowsApplication-SA", "BrailleWindowsApplication-SA.csproj", "{BA3E7CDD-27FD-4951-A044-1246D8F01BDB}"
 EndProject
-<<<<<<< HEAD
-=======
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braille-Printing-Windows-App", "C:\Users\AMANTER\Downloads\Braille-Printing-Windows-App\Braille-Printing-Windows-App\Braille-Printing-Windows-App.csproj", "{172C800C-4B3B-431F-A6F7-B2B956BE4EA1}"
-EndProject
->>>>>>> be8f00bb667c5841ea50ce5f18eb7e205654ef9d
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,13 +15,6 @@ Global
 		{BA3E7CDD-27FD-4951-A044-1246D8F01BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA3E7CDD-27FD-4951-A044-1246D8F01BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA3E7CDD-27FD-4951-A044-1246D8F01BDB}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-=======
-		{172C800C-4B3B-431F-A6F7-B2B956BE4EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{172C800C-4B3B-431F-A6F7-B2B956BE4EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{172C800C-4B3B-431F-A6F7-B2B956BE4EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{172C800C-4B3B-431F-A6F7-B2B956BE4EA1}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> be8f00bb667c5841ea50ce5f18eb7e205654ef9d
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
