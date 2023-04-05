@@ -48,6 +48,9 @@
             this.ConvertBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Printbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ClosePic = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BraillePrint = new System.Drawing.Printing.PrintDocument();
+            this.BraillePreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -123,6 +126,7 @@
             this.ShapesBtn.Size = new System.Drawing.Size(214, 66);
             this.ShapesBtn.TabIndex = 2;
             this.ShapesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ShapesBtn.Click += new System.EventHandler(this.ShapesBtn_Click);
             // 
             // label1
             // 
@@ -240,6 +244,7 @@
             this.ConvertBtn.Size = new System.Drawing.Size(214, 66);
             this.ConvertBtn.TabIndex = 4;
             this.ConvertBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ConvertBtn.Click += new System.EventHandler(this.ConvertBtn_Click);
             // 
             // Printbtn
             // 
@@ -265,6 +270,7 @@
             this.Printbtn.Size = new System.Drawing.Size(214, 66);
             this.Printbtn.TabIndex = 12;
             this.Printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Printbtn.Click += new System.EventHandler(this.Printbtn_Click);
             // 
             // ClosePic
             // 
@@ -275,6 +281,31 @@
             this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ClosePic.TabIndex = 13;
             this.ClosePic.TabStop = false;
+            this.ClosePic.Click += new System.EventHandler(this.ClosePic_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(282, 587);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "label4";
+            // 
+            // BraillePrint
+            // 
+            this.BraillePrint.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.BraillePrint_PrintPage);
+            // 
+            // BraillePreviewDialog
+            // 
+            this.BraillePreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.BraillePreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.BraillePreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.BraillePreviewDialog.Enabled = true;
+            this.BraillePreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("BraillePreviewDialog.Icon")));
+            this.BraillePreviewDialog.Name = "BraillePreviewDialog";
+            this.BraillePreviewDialog.Visible = false;
+            this.BraillePreviewDialog.Load += new System.EventHandler(this.BraillePreviewDialog_Load);
             // 
             // Texts
             // 
@@ -282,6 +313,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.ClosePic);
             this.Controls.Add(this.Printbtn);
             this.Controls.Add(this.ConvertBtn);
@@ -326,5 +358,8 @@
         private Bunifu.Framework.UI.BunifuThinButton2 ConvertBtn;
         private Bunifu.Framework.UI.BunifuThinButton2 Printbtn;
         private System.Windows.Forms.PictureBox ClosePic;
+        private System.Windows.Forms.Label label3;
+        private System.Drawing.Printing.PrintDocument BraillePrint;
+        private System.Windows.Forms.PrintPreviewDialog BraillePreviewDialog;
     }
 }

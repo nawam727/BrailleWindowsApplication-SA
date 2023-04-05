@@ -78,7 +78,7 @@
             // ClosePic
             // 
             this.ClosePic.Image = ((System.Drawing.Image)(resources.GetObject("ClosePic.Image")));
-            this.ClosePic.Location = new System.Drawing.Point(1245, 12);
+            this.ClosePic.Location = new System.Drawing.Point(1239, 12);
             this.ClosePic.Name = "ClosePic";
             this.ClosePic.Size = new System.Drawing.Size(29, 38);
             this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,6 +206,7 @@
             this.TextsBtn.Size = new System.Drawing.Size(214, 66);
             this.TextsBtn.TabIndex = 3;
             this.TextsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TextsBtn.Click += new System.EventHandler(this.TextsBtn_Click);
             // 
             // ShapesBtn
             // 
@@ -414,6 +415,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Shapes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shapes";
             ((System.ComponentModel.ISupportInitialize)(this.ClosePic)).EndInit();
             this.border.ResumeLayout(false);

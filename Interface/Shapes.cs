@@ -80,5 +80,11 @@ namespace BrailleWindowsApplication_SA.Interface
             }
         }
 
+        private void TextsBtn_Click(object sender, EventArgs e)
+        {
+            Texts obj = new Texts();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
