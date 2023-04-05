@@ -49,6 +49,8 @@
             this.Printbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.ClosePic = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.BraillePrint = new System.Drawing.Printing.PrintDocument();
+            this.BraillePreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -268,6 +270,7 @@
             this.Printbtn.Size = new System.Drawing.Size(214, 66);
             this.Printbtn.TabIndex = 12;
             this.Printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Printbtn.Click += new System.EventHandler(this.Printbtn_Click);
             // 
             // ClosePic
             // 
@@ -288,6 +291,21 @@
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "label4";
+            // 
+            // BraillePrint
+            // 
+            this.BraillePrint.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.BraillePrint_PrintPage);
+            // 
+            // BraillePreviewDialog
+            // 
+            this.BraillePreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.BraillePreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.BraillePreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.BraillePreviewDialog.Enabled = true;
+            this.BraillePreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("BraillePreviewDialog.Icon")));
+            this.BraillePreviewDialog.Name = "BraillePreviewDialog";
+            this.BraillePreviewDialog.Visible = false;
+            this.BraillePreviewDialog.Load += new System.EventHandler(this.BraillePreviewDialog_Load);
             // 
             // Texts
             // 
@@ -341,5 +359,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 Printbtn;
         private System.Windows.Forms.PictureBox ClosePic;
         private System.Windows.Forms.Label label3;
+        private System.Drawing.Printing.PrintDocument BraillePrint;
+        private System.Windows.Forms.PrintPreviewDialog BraillePreviewDialog;
     }
 }

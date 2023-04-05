@@ -54,5 +54,25 @@ namespace BrailleWindowsApplication_SA.Interface
 
             }
         }
+
+        private void BraillePrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string text = BrailleTB.Text;
+            e.Graphics.DrawString(text, new Font("Poppins", 14, FontStyle.Bold), Brushes.Black, new Point(80));
+        }
+
+        private void BraillePreviewDialog_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Printbtn_Click(object sender, EventArgs e)
+        {
+            BraillePrint.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 1280, 720);
+            if (BraillePreviewDialog.ShowDialog() == DialogResult.OK)
+            {
+                BraillePrint.Print();
+            }
+        }
     }
 }
