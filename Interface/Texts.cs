@@ -26,5 +26,33 @@ namespace BrailleWindowsApplication_SA.Interface
         {
 
         }
+
+        private void ShapesBtn_Click(object sender, EventArgs e)
+        {
+            Shapes obj = new Shapes();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void ClosePic_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //To validate
+        private void ConvertBtn_Click(object sender, EventArgs e)
+        {
+            if (TextTB.Text.Trim().Length == 0)
+            {
+                label3.Text = "Please enter a value.";
+                label3.ForeColor = Color.Red;
+                TextTB.Focus();
+            }
+            else
+            {
+                label3.Text = "";
+
+            }
+        }
     }
 }
