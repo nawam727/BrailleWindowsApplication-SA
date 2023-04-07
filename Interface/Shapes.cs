@@ -86,5 +86,74 @@ namespace BrailleWindowsApplication_SA.Interface
             obj.Show();
             this.Hide();
         }
+
+        private void ShapesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Rectangle and Squre printing
+        private void ShapeRectangle(string textValue1, string textValue2, bool second)
+        {
+            para1Lbl.Show();
+            textBox1.Show();
+            para1Lbl.Text = "Side Length";
+            para2Lbl.Hide();
+            textBox2.Hide();
+            panelPara2.Hide();
+
+            Second_Value(second);
+            string url = $"http://localhost:8082/DotPrint/api/rectangle/{textValue1}/{textValue2}";
+           // GetApi(url);
+        }
+        private void Second_Value(bool second)
+        {
+            if (second)
+            {
+                para2Lbl.Show();
+                textBox2.Show();
+                panelPara2.Show();
+                para1Lbl.Text = "Width";
+                para2Lbl.Text = "Height";
+            }
+        }
+
+        private void Parms(string labelText1, string labelText2, bool second)
+        {
+            para1Lbl.Show();
+            panelPara1.Show();
+            para1Lbl.Text = labelText1;
+            para2Lbl.Hide();
+            panelPara2.Hide();
+
+            if (second)
+            {
+                para2Lbl.Show();
+                panelPara2.Show();
+                para2Lbl.Text = labelText2;
+            }
+        }
+
+        //Circle printing
+        private void ShapeCircle()
+        {
+            Parms("Radius", "", false);
+            string textValue1 = textBox1.Text;
+            string textValue2 = "3";
+
+            string url = $"http://localhost:8082/DotPrint/api/circle/{textValue1}/{textValue2}";
+          //  GetApi(url);
+        }
+
+        //Pyramid printing
+        private void ShapePyramid()
+        {
+            Parms("Rows", "", false);
+            string textValue1 = textBox1.Text;
+            //string textValue2 = "3";
+            string url = $"http://localhost:8082/DotPrint/api/piramide/{textValue1}";
+           // GetApi(url);
+
+        }
     }
 }
