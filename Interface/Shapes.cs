@@ -133,5 +133,27 @@ namespace BrailleWindowsApplication_SA.Interface
                 para2Lbl.Text = labelText2;
             }
         }
+
+        //Circle printing
+        private void ShapeCircle()
+        {
+            Parms("Radius", "", false);
+            string textValue1 = textBox1.Text;
+            string textValue2 = "3";
+
+            string url = $"http://localhost:8082/DotPrint/api/circle/{textValue1}/{textValue2}";
+          //  GetApi(url);
+        }
+
+        //Pyramid printing
+        private void ShapePyramid()
+        {
+            Parms("Rows", "", false);
+            string textValue1 = textBox1.Text;
+            //string textValue2 = "3";
+            string url = $"http://localhost:8082/DotPrint/api/piramide/{textValue1}";
+           // GetApi(url);
+
+        }
     }
 }
