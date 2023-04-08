@@ -65,13 +65,13 @@ namespace BrailleWindowsApplication_SA.Interface
                     ShapePyramid();
                     break;
                 case "Circle":
-                    //ShapeCircle();
+                    ShapeCircle();
                     break;
                 case "Right Triangle":
-                    //ShapeRTriangle();
+                    ShapeRTriangle();
                     break;
                 case "Left Triangle":
-                    //ShapeLTriangle();
+                    ShapeLTriangle();
                     break;
                 case "Diamond":
                     //ShapeDiamond();
@@ -162,6 +162,15 @@ namespace BrailleWindowsApplication_SA.Interface
             Parms("Rows", "", false);
             string textValue1 = textBox1.Text;
             string url = $"http://localhost:8082/DotPrint/api/righttriangle/{textValue1}";
+            GetApi(url);
+        }
+
+        //Left Triangle printing
+        private void ShapeLTriangle()
+        {
+            Parms("Rows", "", false);
+            string textValue1 = textBox1.Text;
+            string url = $"http://localhost:8082/DotPrint/api/lefttriangle/{textValue1}";
             GetApi(url);
         }
 
