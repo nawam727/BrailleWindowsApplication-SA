@@ -74,7 +74,7 @@ namespace BrailleWindowsApplication_SA.Interface
                     ShapeLTriangle();
                     break;
                 case "Diamond":
-                    //ShapeDiamond();
+                    ShapeDiamond();
                     break;
                 default:
                     break;
@@ -171,6 +171,14 @@ namespace BrailleWindowsApplication_SA.Interface
             Parms("Rows", "", false);
             string textValue1 = textBox1.Text;
             string url = $"http://localhost:8082/DotPrint/api/lefttriangle/{textValue1}";
+            GetApi(url);
+        }
+        //Diamond printing
+        private void ShapeDiamond()
+        {
+            Parms("Rows", "", false);
+            string textValue1 = textBox1.Text;
+            string url = $"http://localhost:8082/DotPrint/api/diamond/{textValue1}";
             GetApi(url);
         }
 
