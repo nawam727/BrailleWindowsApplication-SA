@@ -40,6 +40,21 @@ namespace BrailleWindowsApplication_SA.Interface
         }
 
         //To validate
+
+        
+        private void TextTBValidating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TextTB.Text))
+            {
+                e.Cancel = true;
+                label3.Text = "Please enter a value.";
+                label3.ForeColor = Color.Red;
+            }
+            else
+            {
+                label3.Text = "";
+            }
+        }
         private void ConvertBtn_Click(object sender, EventArgs e)
         {
             if (TextTB.Text.Trim().Length == 0)
