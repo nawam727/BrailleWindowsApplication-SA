@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,8 @@ namespace BrailleWindowsApplication_SA.Interface
         public Texts()
         {
             InitializeComponent();
+            TextTB.Validating += TextTBValidating;
+            ConvertBtn.Click += ConvertBtn_Click;
         }
 
         private void Texts_Load(object sender, EventArgs e)
@@ -34,6 +38,7 @@ namespace BrailleWindowsApplication_SA.Interface
             this.Hide();
         }
 
+        //To close the application
         private void ClosePic_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -44,6 +49,7 @@ namespace BrailleWindowsApplication_SA.Interface
         
         private void TextTBValidating(object sender, CancelEventArgs e)
         {
+            
             if (string.IsNullOrWhiteSpace(TextTB.Text))
             {
                 e.Cancel = true;
@@ -55,8 +61,11 @@ namespace BrailleWindowsApplication_SA.Interface
                 label3.Text = "";
             }
         }
+
+        //Convert bttn
         private void ConvertBtn_Click(object sender, EventArgs e)
         {
+            PrintBraille();
             if (TextTB.Text.Trim().Length == 0)
             {
                 label3.Text = "Please enter a value.";
@@ -70,10 +79,42 @@ namespace BrailleWindowsApplication_SA.Interface
             }
         }
 
+
+        //Print braille charactors in BrailleTB
+        private void PrintBraille()
+        {
+            string text = TextTB.Text;
+            string url = $"http://localhost:8082/DotPrint/api/brailletext/{text}";
+            GetApi(url);
+        }
+
+        //Get Api data from api
+        private async void GetApi(string url)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                HttpResponseMessage response = await client.GetAsync(url);
+                string dotPrint = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    BrailleTB.Text = dotPrint;
+                }
+                else
+                {
+                    BrailleTB.Text = "Server Error";
+                }
+            }
+            catch (Exception ex)
+            {
+                BrailleTB.Text = ex.Message;
+            }
+
+        }
         private void BraillePrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             string text = BrailleTB.Text;
-            e.Graphics.DrawString(text, new Font("Poppins", 14, FontStyle.Bold), Brushes.Black, new Point(80));
+            e.Graphics.DrawString(text, new Font("Poppins", 20, FontStyle.Bold), Brushes.Black, new Point(80));
         }
 
         private void BraillePreviewDialog_Load(object sender, EventArgs e)
@@ -81,13 +122,19 @@ namespace BrailleWindowsApplication_SA.Interface
 
         }
 
+        //Print button
         private void Printbtn_Click(object sender, EventArgs e)
         {
-            BraillePrint.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 1280, 720);
-            if (BraillePreviewDialog.ShowDialog() == DialogResult.OK)
+            /*PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.BraillePrint_PrintPage);
+
+            PrintPreviewDialog printDialog = new PrintPreviewDialog();
+            printDialog.Document = pd;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
             {
-                BraillePrint.Print();
-            }
+                pd.Print();
+            }*/
         }
     }
 }
