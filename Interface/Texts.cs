@@ -30,7 +30,7 @@ namespace BrailleWindowsApplication_SA.Interface
         {
 
         }
-
+        //To navigate to shapes tab
         private void ShapesBtn_Click(object sender, EventArgs e)
         {
             Shapes obj = new Shapes();
@@ -45,8 +45,6 @@ namespace BrailleWindowsApplication_SA.Interface
         }
 
         //To validate
-
-        
         private void TextTBValidating(object sender, CancelEventArgs e)
         {
             
@@ -111,6 +109,7 @@ namespace BrailleWindowsApplication_SA.Interface
             }
 
         }
+        //Print page
         private void BraillePrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             string text = BrailleTB.Text;
@@ -125,7 +124,7 @@ namespace BrailleWindowsApplication_SA.Interface
         //Print button
         private void Printbtn_Click(object sender, EventArgs e)
         {
-            /*PrintDocument pd = new PrintDocument();
+            PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(this.BraillePrint_PrintPage);
 
             PrintPreviewDialog printDialog = new PrintPreviewDialog();
@@ -134,7 +133,7 @@ namespace BrailleWindowsApplication_SA.Interface
             if (printDialog.ShowDialog() == DialogResult.OK)
             {
                 pd.Print();
-            }*/
+            }
         }
     }
 }
