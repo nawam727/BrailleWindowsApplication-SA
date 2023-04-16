@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -16,6 +17,7 @@ namespace BrailleWindowsApplication_SA.Interface
         public Shapes()
         {
             InitializeComponent();
+            ShapesList();
         }
 
         //Convert btn and error
@@ -81,6 +83,7 @@ namespace BrailleWindowsApplication_SA.Interface
             }
         }
 
+        //Navigate to text tab
         private void TextsBtn_Click(object sender, EventArgs e)
         {
             Texts obj = new Texts();
@@ -193,6 +196,18 @@ namespace BrailleWindowsApplication_SA.Interface
                 if (response.IsSuccessStatusCode)
                 {
                     brailleshapTB.Text = dotPrint;
+                    string shape = brailleshapTB.Text;
+                    int dotCount = 0;
+
+                    foreach (char c in shape)
+                    {
+                        if (c == '.')
+                        {
+                            dotCount++;
+                        }
+                    }
+
+                    MessageBox.Show("The number of dots in the shape is: " + dotCount);
                 }
                 else
                 {
@@ -202,6 +217,40 @@ namespace BrailleWindowsApplication_SA.Interface
             catch (Exception ex)
             {
                 brailleshapTB.Text = ex.Message;
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string text = brailleshapTB.Text;
+            string shape = brailleshapTB.Text;
+
+            // Count the number of dots in the shape
+            int dotCount = 0;
+
+            foreach (char c in shape)
+            {
+                if (c == '.')
+                {
+                    dotCount++;
+                }
+            }
+            //string shapeWithDotCount = $"{shape} (Number of dots in the shape: {dotCount})";
+            e.Graphics.DrawString($"Number of dots in the shape is: {dotCount}", new Font("Poppins", 12), Brushes.Black, new PointF(80, 240));
+            e.Graphics.DrawString(text, new Font("Poppins", 20, FontStyle.Bold), Brushes.Black, new Point(80));
+        }
+
+        private void ShapePrintBtn_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.printDocument1_PrintPage);
+
+            PrintPreviewDialog printDialog = new PrintPreviewDialog();
+            printDialog.Document = pd;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                pd.Print();
             }
         }
     }
