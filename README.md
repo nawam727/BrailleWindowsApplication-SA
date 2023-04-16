@@ -33,7 +33,7 @@ This app was created for the Software Architecture module group project on my ca
 </ul>
 
 ## Contributors
-*Contributors of `PetShop-Management-System-BP-ERP` and other related projects*
+*Contributors of `BrailleWindowsApplication-SA` and other related projects*
 
 <p align="center">
   <img src="https://avatars.githubusercontent.com/u/86096042?v=4" alt="username" width="100">
