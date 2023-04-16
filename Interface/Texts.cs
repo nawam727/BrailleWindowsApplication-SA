@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -60,6 +61,8 @@ namespace BrailleWindowsApplication_SA.Interface
                 label3.Text = "";
             }
         }
+
+        //Convert bttn
         private void ConvertBtn_Click(object sender, EventArgs e)
         {
             PrintBraille();
@@ -111,7 +114,7 @@ namespace BrailleWindowsApplication_SA.Interface
         private void BraillePrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             string text = BrailleTB.Text;
-            e.Graphics.DrawString(text, new Font("Poppins", 14, FontStyle.Bold), Brushes.Black, new Point(80));
+            e.Graphics.DrawString(text, new Font("Poppins", 20, FontStyle.Bold), Brushes.Black, new Point(80));
         }
 
         private void BraillePreviewDialog_Load(object sender, EventArgs e)
@@ -119,13 +122,19 @@ namespace BrailleWindowsApplication_SA.Interface
 
         }
 
+        //Print button
         private void Printbtn_Click(object sender, EventArgs e)
         {
-            BraillePrint.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 1280, 720);
-            if (BraillePreviewDialog.ShowDialog() == DialogResult.OK)
+            /*PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.BraillePrint_PrintPage);
+
+            PrintPreviewDialog printDialog = new PrintPreviewDialog();
+            printDialog.Document = pd;
+
+            if (printDialog.ShowDialog() == DialogResult.OK)
             {
-                BraillePrint.Print();
-            }
+                pd.Print();
+            }*/
         }
     }
 }
