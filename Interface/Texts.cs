@@ -96,18 +96,38 @@ namespace BrailleWindowsApplication_SA.Interface
                 string dotPrint = await response.Content.ReadAsStringAsync();
                 if (response.IsSuccessStatusCode)
                 {
+                    int dotCount = 0;
+                    foreach (char c in dotPrint)
+                    {
+                        if (c == '⠸' || c == '⠠' || c == '⠰' || c == '⠨')
+                        {
+                            continue;
+                        }
+                        if (c == '⠈' || c == '⠁' || c == '⠉' || c == '⠊' || c == '⠌' || c == '⠍' || c == '⠎' || c == '⠏' ||
+                            c == '⠐' || c == '⠑' || c == '⠒' || c == '⠓' || c == '⠔' || c == '⠕' || c == '⠖' || c == '⠗' ||
+                            c == '⠘' || c == '⠙' || c == '⠚' || c == '⠛' || c == '⠜' || c == '⠝' || c == '⠞' || c == '⠟' ||
+                            c == '⠠' || c == '⠡' || c == '⠢' || c == '⠣' || c == '⠤' || c == '⠥' || c == '⠦' || c == '⠧' ||
+                            c == '⠨' || c == '⠩' || c == '⠪' || c == '⠫' || c == '⠬' || c == '⠭' || c == '⠮' || c == '⠯' ||
+                            c == '⠰' || c == '⠱' || c == '⠲' || c == '⠳' || c == '⠴' || c == '⠵' || c == '⠶' || c == '⠷' ||
+                            c == '⠸' || c == '⠹' || c == '⠺' || c == '⠻' || c == '⠼' || c == '⠽' || c == '⠾' || c == '⠿')
+                        {
+                            dotCount++;
+                        }
+                    }
                     BrailleTB.Text = dotPrint;
+                    MessageBox.Show("Number of dots in the text: " + dotCount);
+                    MessageBox.Show("The total amount of ink required to print the text is: " + dotCount * 0.5 + "ml");
                 }
                 else
                 {
                     BrailleTB.Text = "Server Error";
                 }
+
             }
             catch (Exception ex)
             {
                 BrailleTB.Text = ex.Message;
             }
-
         }
         //Print page
         private void BraillePrint_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

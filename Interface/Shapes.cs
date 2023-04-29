@@ -208,6 +208,8 @@ namespace BrailleWindowsApplication_SA.Interface
                     }
 
                     MessageBox.Show("The number of dots in the shape is: " + dotCount);
+                    double totalInk = dotCount * 0.05;
+                    MessageBox.Show("The total amount of ink required to print the shape is: " + totalInk + " ml");
                 }
                 else
                 {
@@ -218,6 +220,7 @@ namespace BrailleWindowsApplication_SA.Interface
             {
                 brailleshapTB.Text = ex.Message;
             }
+
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
