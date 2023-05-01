@@ -72,9 +72,8 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(329, 886);
+            this.panel1.Size = new System.Drawing.Size(247, 720);
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,10 +95,10 @@
             this.TextsBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
             this.TextsBtn.IdleForecolor = System.Drawing.Color.White;
             this.TextsBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.TextsBtn.Location = new System.Drawing.Point(21, 474);
-            this.TextsBtn.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.TextsBtn.Location = new System.Drawing.Point(16, 385);
+            this.TextsBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.TextsBtn.Name = "TextsBtn";
-            this.TextsBtn.Size = new System.Drawing.Size(285, 81);
+            this.TextsBtn.Size = new System.Drawing.Size(214, 66);
             this.TextsBtn.TabIndex = 3;
             this.TextsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -121,10 +120,10 @@
             this.ShapesBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ShapesBtn.IdleForecolor = System.Drawing.Color.White;
             this.ShapesBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.ShapesBtn.Location = new System.Drawing.Point(20, 329);
-            this.ShapesBtn.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.ShapesBtn.Location = new System.Drawing.Point(15, 267);
+            this.ShapesBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.ShapesBtn.Name = "ShapesBtn";
-            this.ShapesBtn.Size = new System.Drawing.Size(285, 81);
+            this.ShapesBtn.Size = new System.Drawing.Size(214, 66);
             this.ShapesBtn.TabIndex = 2;
             this.ShapesBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ShapesBtn.Click += new System.EventHandler(this.ShapesBtn_Click);
@@ -134,20 +133,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(79, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(59, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 53);
+            this.label1.Size = new System.Drawing.Size(185, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "Braille Printer";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(55, 55);
+            this.pictureBox1.Size = new System.Drawing.Size(41, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -157,10 +154,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(376, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(282, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(349, 53);
+            this.label2.Size = new System.Drawing.Size(284, 42);
             this.label2.TabIndex = 4;
             this.label2.Text = "Input Text to Convert ";
             // 
@@ -168,21 +164,19 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
             this.panel2.Controls.Add(this.TextTB);
-            this.panel2.Location = new System.Drawing.Point(376, 144);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(282, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(607, 553);
+            this.panel2.Size = new System.Drawing.Size(455, 449);
             this.panel2.TabIndex = 8;
             // 
             // TextTB
             // 
             this.TextTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.TextTB.Font = new System.Drawing.Font("Poppins", 12F);
+            this.TextTB.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextTB.ForeColor = System.Drawing.Color.White;
-            this.TextTB.Location = new System.Drawing.Point(4, 4);
-            this.TextTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TextTB.Location = new System.Drawing.Point(3, 3);
             this.TextTB.Name = "TextTB";
-            this.TextTB.Size = new System.Drawing.Size(599, 546);
+            this.TextTB.Size = new System.Drawing.Size(450, 444);
             this.TextTB.TabIndex = 7;
             this.TextTB.Text = "";
             // 
@@ -200,21 +194,19 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
             this.panel3.Controls.Add(this.BrailleTB);
-            this.panel3.Location = new System.Drawing.Point(1060, 144);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(795, 117);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(607, 553);
+            this.panel3.Size = new System.Drawing.Size(455, 449);
             this.panel3.TabIndex = 10;
             // 
             // BrailleTB
             // 
             this.BrailleTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.BrailleTB.Font = new System.Drawing.Font("Poppins", 12F);
+            this.BrailleTB.Font = new System.Drawing.Font("Poppins", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BrailleTB.ForeColor = System.Drawing.Color.White;
-            this.BrailleTB.Location = new System.Drawing.Point(4, 4);
-            this.BrailleTB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BrailleTB.Location = new System.Drawing.Point(3, 3);
             this.BrailleTB.Name = "BrailleTB";
-            this.BrailleTB.Size = new System.Drawing.Size(599, 546);
+            this.BrailleTB.Size = new System.Drawing.Size(450, 444);
             this.BrailleTB.TabIndex = 7;
             this.BrailleTB.Text = "";
             // 
@@ -246,10 +238,10 @@
             this.ConvertBtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ConvertBtn.IdleForecolor = System.Drawing.Color.White;
             this.ConvertBtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.ConvertBtn.Location = new System.Drawing.Point(697, 757);
-            this.ConvertBtn.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.ConvertBtn.Location = new System.Drawing.Point(523, 615);
+            this.ConvertBtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.ConvertBtn.Name = "ConvertBtn";
-            this.ConvertBtn.Size = new System.Drawing.Size(285, 81);
+            this.ConvertBtn.Size = new System.Drawing.Size(214, 66);
             this.ConvertBtn.TabIndex = 4;
             this.ConvertBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ConvertBtn.Click += new System.EventHandler(this.ConvertBtn_Click);
@@ -272,10 +264,10 @@
             this.Printbtn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Printbtn.IdleForecolor = System.Drawing.Color.White;
             this.Printbtn.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(111)))), ((int)(((byte)(248)))));
-            this.Printbtn.Location = new System.Drawing.Point(1060, 757);
-            this.Printbtn.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
+            this.Printbtn.Location = new System.Drawing.Point(795, 615);
+            this.Printbtn.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Printbtn.Name = "Printbtn";
-            this.Printbtn.Size = new System.Drawing.Size(285, 81);
+            this.Printbtn.Size = new System.Drawing.Size(214, 66);
             this.Printbtn.TabIndex = 12;
             this.Printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Printbtn.Click += new System.EventHandler(this.Printbtn_Click);
@@ -283,10 +275,9 @@
             // ClosePic
             // 
             this.ClosePic.Image = ((System.Drawing.Image)(resources.GetObject("ClosePic.Image")));
-            this.ClosePic.Location = new System.Drawing.Point(1652, 15);
-            this.ClosePic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClosePic.Location = new System.Drawing.Point(1239, 12);
             this.ClosePic.Name = "ClosePic";
-            this.ClosePic.Size = new System.Drawing.Size(39, 47);
+            this.ClosePic.Size = new System.Drawing.Size(29, 38);
             this.ClosePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ClosePic.TabIndex = 13;
             this.ClosePic.TabStop = false;
@@ -296,10 +287,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(376, 722);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(282, 587);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 26);
+            this.label3.Size = new System.Drawing.Size(0, 22);
             this.label3.TabIndex = 25;
             // 
             // BraillePrint
@@ -319,10 +309,10 @@
             // 
             // Texts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(54)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1707, 886);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ClosePic);
             this.Controls.Add(this.Printbtn);
@@ -333,7 +323,6 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Texts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texts";

@@ -115,8 +115,8 @@ namespace BrailleWindowsApplication_SA.Interface
                         }
                     }
                     BrailleTB.Text = dotPrint;
-                    MessageBox.Show("Number of dots in the text: " + dotCount);
-                    MessageBox.Show("The total amount of ink required to print the text is: " + dotCount * 0.5 + "ml");
+                    MessageBox.Show("Number of dots in the text: " + dotCount*3);
+                    MessageBox.Show("The total amount of ink required to print the text is: " + dotCount * 3 * 0.5 + "ml");
                 }
                 else
                 {
