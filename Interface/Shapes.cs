@@ -17,6 +17,11 @@ namespace BrailleWindowsApplication_SA.Interface
         public Shapes()
         {
             InitializeComponent();
+            
+        }
+
+        private void Shapes_Load(object sender, EventArgs e)
+        {
             ShapesList();
         }
 
@@ -49,7 +54,7 @@ namespace BrailleWindowsApplication_SA.Interface
         }
         private void ShapesCB_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShapesList();
+            //ShapesList();
             string selectedItem = ShapesCB.SelectedItem.ToString();
 
             switch (selectedItem)
@@ -256,5 +261,7 @@ namespace BrailleWindowsApplication_SA.Interface
                 pd.Print();
             }
         }
+
+        
     }
 }
